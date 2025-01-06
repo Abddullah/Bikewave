@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { StyleSheet, Image, ImageBackground, View, Touchable, } from 'react-native';
 import { _retrieveData } from '../../services/assynsStorage';
 import Images from '../../assets/images/index'
+import { Logo } from '../../assets/icons/index'
 import { getCurrentUser, } from '../../store/actions/action'
 import { Button } from 'native-base';
 
@@ -15,15 +16,16 @@ export default function Splash({ navigation }) {
       resizeMode="cover"
       source={Images.splashBg}
     >
-      {/* <View style={styles.overlay}>
-        <Image
+      <View style={styles.overlay}>
+        {/* <Image
           resizeMode="contain"
           style={{ width: 100, height: 100 }}
           source={Images.Logo}
-        />
-      </View> */}
+        /> */}
+        <Logo />
+      </View>
 
-      <Button onPress={() => navigation.navigate('Tabs')}>
+      <Button style={{ marginTop: 20 }} onPress={() => navigation.navigate('Tabs')}>
         Show Bottom Navigation
       </Button>
 
@@ -40,5 +42,6 @@ const styles = StyleSheet.create({
   overlay: {
     padding: 20,
     borderRadius: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
   },
 });
