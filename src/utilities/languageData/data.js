@@ -6,9 +6,9 @@ export const languageData = [
         }
     },
     {
-        locale: 'it',
+        locale: 'sp',
         translation: {
-            hi: 'Ciao, questa è la schermata iniziale',
+            hi: 'Hola, esta es la pantalla de inicio',
         }
     },
 ];
@@ -21,8 +21,8 @@ export const appLanguages = [
     },
     {
         id: '1',
-        name: 'Italian',
-        code: 'it'
+        name: 'spanish',
+        code: 'sp'
     },
 
 ];

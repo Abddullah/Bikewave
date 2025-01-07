@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { StyleSheet, Image, ImageBackground, View, Touchable, } from 'react-native';
 import { _retrieveData } from '../../services/assynsStorage';
 import Images from '../../assets/images/index'
-import { Logo } from '../../assets/icons/index'
+import { Logo } from '../../assets/svg/index'
 import { getCurrentUser, } from '../../store/actions/action'
 import { Button } from 'native-base';
 

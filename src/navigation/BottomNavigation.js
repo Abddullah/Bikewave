@@ -9,7 +9,7 @@ import screenResolution from '../utilities/constants/screenResolution';
 import { colors } from '../utilities/constants';
 
 // icons
-import { HomeActive, HomeInactive, } from '../assets/icons';
+import { HomeActive, HomeInactive, } from '../assets/svg';
 
 // bottom navigation screens
 import Home from '../screens/Home/index';
