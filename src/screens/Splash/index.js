@@ -1,34 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { StyleSheet, Image, ImageBackground, View, Touchable, } from 'react-native';
-import { _retrieveData } from '../../services/assynsStorage';
-import Images from '../../assets/images/index'
-import { Logo } from '../../assets/svg/index'
-import { getCurrentUser, } from '../../store/actions/action'
-import { Button } from 'native-base';
+import React, {useEffect} from 'react';
+import {StyleSheet, ImageBackground, View} from 'react-native';
+import Images from '../../assets/images/index';
+import {Logo} from '../../assets/svg/index';
+import Colors from '../../utilities/constants/colors';
 
-export default function Splash({ navigation }) {
-  const dispatch = useDispatch()
+export default function Splash({navigation}) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.navigate('Register');
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [navigation]);
 
   return (
     <ImageBackground
       style={styles.background}
       resizeMode="cover"
-      source={Images.splashBg}
-    >
+      source={Images.splashBg}>
       <View style={styles.overlay}>
-        {/* <Image
-          resizeMode="contain"
-          style={{ width: 100, height: 100 }}
-          source={Images.Logo}
-        /> */}
         <Logo />
       </View>
-
-      <Button style={{ marginTop: 20 }} onPress={() => navigation.navigate('Tabs')}>
-        Show Bottom Navigation
-      </Button>
-
     </ImageBackground>
   );
 }
@@ -42,6 +33,6 @@ const styles = StyleSheet.create({
   overlay: {
     padding: 20,
     borderRadius: 10,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: Colors.white,
   },
 });

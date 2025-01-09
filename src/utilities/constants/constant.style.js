@@ -1,30 +1,30 @@
-import { StyleSheet } from 'react-native';
-import { RFValue } from "react-native-responsive-fontsize";
+import {StyleSheet} from 'react-native';
+import {RFValue} from 'react-native-responsive-fontsize';
 import screenResolution from './screenResolution';
-import Colors from './colors';
 
 export const Typography = StyleSheet.create({
-  heading_1: {
-    fontSize: RFValue(20, screenResolution.screenHeight),
-    fontWeight: 'bold',
+  footer_text: {
+    fontFamily: 'Roboto-Medium',
+    fontSize: RFValue(8, screenResolution.screenWidth),
   },
-  heading_2: {
-    fontSize: RFValue(18, screenResolution.screenHeight),
-    fontWeight: 'bold',
+  heading: {
+    fontFamily: 'Inter_18pt-Bold',
+    fontSize: RFValue(15, screenResolution.screenWidth),
   },
-  heading_3: {
-    fontSize: RFValue(16, screenResolution.screenHeight),
-    fontWeight: 'bold',
+  input_title: {
+    fontFamily: 'Inter_18pt-Medium',
+    fontSize: RFValue(8, screenResolution.screenWidth),
   },
-  paragraph_1: {
-    fontSize: RFValue(14, screenResolution.screenHeight),
+  btn_text: {
+    fontFamily: 'Inter_18pt-Bold',
+    fontSize: RFValue(9, screenResolution.screenWidth),
   },
-  paragraph_2: {
-    fontSize: RFValue(12, screenResolution.screenHeight),
-    fontWeight: 'bold',
+  small_text_normal: {
+    fontFamily: 'Inter_18pt-Regular',
+    fontSize: RFValue(8, screenResolution.screenWidth),
   },
-  paragraph_3: {
-    fontSize: RFValue(10, screenResolution.screenHeight),
-    fontWeight: 'bold',
+  small_text_bold_Italic: {
+    fontFamily: 'Inter_18pt-ExtraBoldItalic',
+    fontSize: RFValue(8, screenResolution.screenWidth),
   },
 });
