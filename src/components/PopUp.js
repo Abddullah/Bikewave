@@ -30,8 +30,10 @@ const PopUp = ({
         onPress={iconPress}>
         {icon}
       </TouchableOpacity>
-      <Text style={[Typography.heading, styles.headingText]}>{title}</Text>
-      <Text style={[Typography.small_text_normal, styles.descriptionText]}>
+      <Text style={[Typography.f_24_inter_bold, styles.headingText]}>
+        {title}
+      </Text>
+      <Text style={[Typography.f_16_inter_regular, styles.descriptionText]}>
         {description}
       </Text>
       <AppButton

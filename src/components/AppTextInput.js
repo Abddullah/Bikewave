@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   inputField: {
-    ...Typography.input_title,
+    ...Typography.f_14_inter_medium,
     color: Colors.black,
     flex: 1,
   },

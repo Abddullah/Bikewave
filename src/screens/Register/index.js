@@ -51,7 +51,7 @@ export default function Register({navigation}) {
           onButtonPress={() => navigation.navigate('Register')}
         /> */}
         <View style={styles.formContainer}>
-          <Text style={styles.heading}>{t('create_your_account')}</Text>
+          <Text style={styles.f_24_inter_bold}>{t('create_your_account')}</Text>
           <Formik
             initialValues={{
               firstName: '',
@@ -112,11 +112,11 @@ export default function Register({navigation}) {
           </Formik>
           <Text
             onPress={() => navigation.navigate('Login')}
-            style={[Typography.small_text_normal, styles.footerText]}>
+            style={[Typography.f_16_inter_regular, styles.footerText]}>
             {t('already_have_an_account')}{' '}
             <Text
               style={[
-                Typography.small_text_bold_Italic,
+                Typography.f_16_inter_extra_bold_italic,
                 {color: Colors.primary},
               ]}>
               {t('login')}
@@ -137,8 +137,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingTop: 70,
   },
-  heading: {
-    ...Typography.heading,
+  f_24_inter_bold: {
+    ...Typography.f_24_inter_bold,
     color: Colors.black,
     marginBottom: 20,
   },
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: Colors.error,
-    ...Typography.small_text_normal,
+    ...Typography.f_16_inter_regular,
     marginTop: 5,
     marginLeft: 15,
   },

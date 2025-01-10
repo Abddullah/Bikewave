@@ -52,6 +52,14 @@ export const languageData = [
       password_required: 'Password is required',
       passwords_must_match: 'Passwords must match',
       confirm_password_required: 'Confirm password is required',
+      favorites_list_title: 'Here is your list of favorite bicycles',
+      no_favorites_title: "You haven't saved any products to favorites yet",
+      no_favorites_message:
+        "It seems you don't have any bicycles or products in your favorites list yet. Start exploring and save your favorite options to access them easily at any time!",
+      back_to_home: 'Back to home',
+      per_day: '/day',
+      your_city:'Your City',
+      dates:'Dates'
     },
   },
   {
@@ -108,6 +116,14 @@ export const languageData = [
       password_required: 'La contraseña es obligatoria',
       passwords_must_match: 'Las contraseñas deben coincidir',
       confirm_password_required: 'Se requiere confirmar la contraseña',
+      favorites_list_title: 'Aquí tienes tu lista de bicicletas favoritas',
+      no_favorites_title: 'Aún no has guardado ningún producto en favoritos',
+      no_favorites_message:
+        'Parece que aún no tienes bicicletas o productos en tu lista de favoritos. ¡Empieza a explorar y guarda tus opciones favoritas para acceder a ellas fácilmente en cualquier momento!',
+      back_to_home: 'Volver al inicio',
+      per_day: '/día',
+      your_city:'Tu ciudad',
+      dates:'Fechas'
     },
   },
 ];

@@ -1,5 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View,Keyboard,TouchableWithoutFeedback} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import Colors from '../../utilities/constants/colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Typography} from '../../utilities/constants/constant.style';
@@ -21,65 +27,65 @@ const validationSchema = Yup.object({
     .required(t('confirm_password_required')),
 });
 
-export default function ResetPassword() {
+export default function ResetPassword({navigation}) {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-    <SafeAreaView style={styles.container}>
-      <AppStatusBar />
-      {/* when reset password success */}
-      {/* <PopUp
+      <SafeAreaView style={styles.container}>
+        <AppStatusBar />
+        {/* when reset password success */}
+        {/* <PopUp
           icon={<Tick />}
           title={t('password_reset')}
           description={t('password_save_msg')}
           iconPress={() => navigation.navigate('ResetPassword')}
           onButtonPress={() => navigation.navigate('ResetPassword')}
         /> */}
-      {/* when reset password fail */}
-      {/* <PopUp
+        {/* when reset password fail */}
+        {/* <PopUp
           icon={<Cross />}
           title={t('something_went_wrong')}
           description={t('password_save_fail_msg')}
           iconPress={() => navigation.navigate('ResetPassword')}
           onButtonPress={() => navigation.navigate('ResetPassword')}
         /> */}
-      <View style={styles.formContainer}>
-        <Text style={styles.heading}>{t('reset_password')}</Text>
-        <Formik
-          initialValues={{password: '', confirmPassword: ''}}
-          validationSchema={validationSchema}
-          onSubmit={values => {
-            console.log('Reset Password Data', values);
-          }}>
-          {({values, handleChange, handleSubmit, errors, touched}) => (
-            <>
-              <AppTextInput
-                placeholder={t('new_password')}
-                value={values.password}
-                onChangeText={handleChange('password')}
-              />
-              {touched.password && errors.password && (
-                <Text style={styles.errorText}>{errors.password}</Text>
-              )}
-              <AppTextInput
-                placeholder={t('repeat_password')}
-                value={values.confirmPassword}
-                onChangeText={handleChange('confirmPassword')}
-              />
-              {touched.confirmPassword && errors.confirmPassword && (
-                <Text style={styles.errorText}>{errors.confirmPassword}</Text>
-              )}
-              <AppButton
-                title={t('save_password')}
-                btnColor={Colors.primary}
-                btnTitleColor={Colors.white}
-                style={{marginTop: 40}}
-                onPress={handleSubmit}
-              />
-            </>
-          )}
-        </Formik>
-      </View>
-    </SafeAreaView>
+        <View style={styles.formContainer}>
+          <Text style={styles.f_24_inter_bold}>{t('reset_password')}</Text>
+          <Formik
+            initialValues={{password: '', confirmPassword: ''}}
+            validationSchema={validationSchema}
+            onSubmit={values => {
+              console.log('Reset Password Data', values);
+            }}>
+            {({values, handleChange, handleSubmit, errors, touched}) => (
+              <>
+                <AppTextInput
+                  placeholder={t('new_password')}
+                  value={values.password}
+                  onChangeText={handleChange('password')}
+                />
+                {touched.password && errors.password && (
+                  <Text style={styles.errorText}>{errors.password}</Text>
+                )}
+                <AppTextInput
+                  placeholder={t('repeat_password')}
+                  value={values.confirmPassword}
+                  onChangeText={handleChange('confirmPassword')}
+                />
+                {touched.confirmPassword && errors.confirmPassword && (
+                  <Text style={styles.errorText}>{errors.confirmPassword}</Text>
+                )}
+                <AppButton
+                  title={t('save_password')}
+                  btnColor={Colors.primary}
+                  btnTitleColor={Colors.white}
+                  style={{marginTop: 40}}
+                  onPress={() => navigation.navigate('Tabs')}
+                />
+              </>
+            )}
+          </Formik>
+        </View>
+      </SafeAreaView>
     </TouchableWithoutFeedback>
   );
 }
@@ -93,14 +99,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingTop: 70,
   },
-  heading: {
-    ...Typography.heading,
+  f_24_inter_bold: {
+    ...Typography.f_24_inter_bold,
     color: Colors.black,
     marginBottom: 20,
   },
   errorText: {
     color: Colors.error,
-    ...Typography.small_text_normal,
+    ...Typography.f_16_inter_regular,
     marginTop: 5,
     marginLeft: 15,
   },

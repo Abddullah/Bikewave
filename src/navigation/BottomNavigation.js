@@ -30,7 +30,6 @@ import Offer from '../screens/Offer';
 import Messages from '../screens/Messages';
 import Profile from '../screens/Profile';
 
-
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -112,7 +111,7 @@ export function AppBottomNavigator() {
                     color: focused ? colors.primary : colors.dark_gray,
                     top: -12,
                   },
-                  Typography.footer_text,
+                  Typography.f_12_roboto_medium,
                 ]}>
                 {t('home')}
               </Text>
@@ -136,7 +135,7 @@ export function AppBottomNavigator() {
                     color: focused ? colors.primary : colors.dark_gray,
                     top: -12,
                   },
-                  Typography.footer_text,
+                  Typography.f_12_roboto_medium,
                 ]}>
                 {t('favorites')}
               </Text>
@@ -160,7 +159,7 @@ export function AppBottomNavigator() {
                     color: focused ? colors.primary : colors.dark_gray,
                     top: -12,
                   },
-                  Typography.footer_text,
+                  Typography.f_12_roboto_medium,
                 ]}>
                 {t('offer')}
               </Text>
@@ -184,7 +183,7 @@ export function AppBottomNavigator() {
                     color: focused ? colors.primary : colors.dark_gray,
                     top: -12,
                   },
-                  Typography.footer_text,
+                  Typography.f_12_roboto_medium,
                 ]}>
                 {t('messages')}
               </Text>
@@ -208,7 +207,7 @@ export function AppBottomNavigator() {
                     color: focused ? colors.primary : colors.dark_gray,
                     top: -12,
                   },
-                  Typography.footer_text,
+                  Typography.f_12_roboto_medium,
                 ]}>
                 {t('profile')}
               </Text>

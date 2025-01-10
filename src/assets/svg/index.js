@@ -21,6 +21,32 @@ export { default as Back } from './Back.svg';
 export { default as Tick } from './Tick.svg';
 // cross
 export { default as Cross } from './Cross.svg';
+//empty
+export { default as Empty } from './Empty.svg';
+//star
+export { default as Star } from './Star.svg';
+//location
+export { default as Location } from './Location.svg';
+// product categories icons
+export { default as All } from './productCategoriesIcons/All.svg';
+export { default as Road } from './productCategoriesIcons/Road.svg';
+export { default as Mountain } from './productCategoriesIcons/Mountain.svg';
+export { default as City } from './productCategoriesIcons/City.svg';
+export { default as Gravel } from './productCategoriesIcons/Gravel.svg';
+export { default as Electrical } from './productCategoriesIcons/Electrical.svg';
+// search
+export { default as Search } from './Search.svg';
+//filter
+export { default as Filter } from './Filter.svg';
+
+
+
+
+
+
+
+
+
 
 
 
